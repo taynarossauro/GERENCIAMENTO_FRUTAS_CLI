@@ -9,7 +9,7 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
-        //instanciando objetos
+        //iniciando scanner para entrada de dados
         Scanner entrada = new Scanner(System.in);
         Set<String> listaFrutas = new HashSet<>();
         
