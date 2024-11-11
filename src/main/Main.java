@@ -1,5 +1,6 @@
 package main;
 
+//importando bibliotecas
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,10 +9,12 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
+        //instanciando objetos
         Scanner entrada = new Scanner(System.in);
         Set<String> listaFrutas = new HashSet<>();
         
         while (true) {
+            //opções do switch case
             try {
                 System.out.println("\nSelecione uma opção:");
                 System.out.println("1. Adicionar fruta");
@@ -23,7 +26,8 @@ public class Main {
                 
                 int escolha = entrada.nextInt();
                 entrada.nextLine();
-                
+
+                //switch case para usuário utilizar
                 switch (escolha) {
                     case 1:
                         System.out.print("Informe o nome da fruta a ser adicionada: ");
@@ -62,6 +66,7 @@ public class Main {
                     default:
                         System.out.println("Opção inválida. Tente novamente.");
                 }
+                //exception caso a entrada seja inválida
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida. Por favor, insira um número válido.");
                 entrada.nextLine(); 
